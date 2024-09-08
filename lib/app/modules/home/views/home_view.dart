@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:saiful_weather/app/data/model/daily.dart';
 
 import '../../../routes/app_pages.dart';
 import '../../../utils/colors.dart';
@@ -205,7 +204,7 @@ class HomeView extends GetView<HomeController> {
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
-                                      Icon(Icons.opacity, color: Colors.white),
+                                      const Icon(Icons.opacity, color: Colors.white),
                                       const SizedBox(width: 15),
                                       const Text(
                                         "Hum",

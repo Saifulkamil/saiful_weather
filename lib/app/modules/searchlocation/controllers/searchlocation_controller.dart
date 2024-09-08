@@ -8,7 +8,6 @@ class SearchlocationController extends GetxController {
   var isProjectLoaded = true.obs;
   LatLng? position;
 
-  // List<Mapsmarker> lsitMapsMarker = [];
   LatLng? myLocation;
   TextEditingController searchlocationController = TextEditingController();
   bool isSearching = false;

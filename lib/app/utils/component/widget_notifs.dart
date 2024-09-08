@@ -1,6 +1,4 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:saiful_weather/app/utils/colors.dart';
 import 'package:saiful_weather/app/utils/string.dart';
 
