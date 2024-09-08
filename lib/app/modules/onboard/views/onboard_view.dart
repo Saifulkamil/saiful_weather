@@ -41,11 +41,7 @@ class OnboardView extends GetView<OnboardController> {
                   const SizedBox(height: 20),
                   ElevatedButton(
                     onPressed: () async {
-                      var currenposition = await controller.getLocation();
-                      Get.offAllNamed(Routes.HOME,
-                          arguments: {"position": currenposition});
-                      //  await controller.getLocation();
-                      //     print("${controller.currentLocation!.latitude}");
+                      await controller.getLocation();
                     },
                     style: ElevatedButton.styleFrom(
                         padding: const EdgeInsets.symmetric(
