@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:saiful_weather/app/utils/string.dart';
 
-import '../../../routes/app_pages.dart';
 import '../../../utils/colors.dart';
 import '../controllers/onboard_controller.dart';
 

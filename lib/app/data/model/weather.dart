@@ -1,6 +1,5 @@
 import 'daily.dart';
 import 'hourly.dart';
-import 'minutely.dart';
 
 class Weather {
   Timelines? timelines;
