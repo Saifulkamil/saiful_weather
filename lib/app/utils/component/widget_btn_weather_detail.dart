@@ -25,7 +25,7 @@ class WidgetBtnGetStart extends StatelessWidget {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(getStarted,
+            Text(WeatherDetails,
                 style: ColorApp.blackTextStyle(context)
                     .copyWith(fontSize: 18, fontWeight: reguler)),
             const SizedBox(width: 10),

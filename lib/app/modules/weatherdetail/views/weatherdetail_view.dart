@@ -76,7 +76,7 @@ class WeatherdetailView extends GetView<WeatherdetailController> {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("Today",
+                      Text(today,
                           style: ColorApp.whiteTextStyly(context)
                               .copyWith(fontSize: 24, fontWeight: blackBlod)),
                       const SizedBox(width: 52),        
@@ -211,7 +211,12 @@ class WeatherdetailView extends GetView<WeatherdetailController> {
                                         SizedBox(
                                           height: 20,
                                           child: Image.asset(
-                                            'assets/image/img_sun.png',
+                                             daily.values!.cloudCoverAvg! < 30
+                                                ? 'assets/image/img_sun.png'
+                                                : daily.values!.cloudCoverAvg! <
+                                                        70
+                                                    ? 'assets/image/img_cloud_sun.png'
+                                                    : 'assets/image/img_cloud.png',
                                           ),
                                         ),
                                         Text("${daily.values!.temperatureAvg}°",
@@ -236,7 +241,7 @@ class WeatherdetailView extends GetView<WeatherdetailController> {
                     children: [
                       const Icon(Icons.sunny,color: whiteMain, size: 30,),
                       const SizedBox(width: 15,),
-                      Text("DRI Weather",
+                      Text(driWeather,
                           style: ColorApp.whiteTextStyly(context)
                               .copyWith(fontSize: 18, fontWeight: reguler)),
                     ],

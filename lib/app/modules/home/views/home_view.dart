@@ -66,9 +66,10 @@ class HomeView extends GetView<HomeController> {
                           const SizedBox(width: 10),
                           Flexible(
                             child: Text("${homeController.address}",
-                            overflow: TextOverflow.ellipsis,
+                                overflow: TextOverflow.ellipsis,
                                 style: ColorApp.whiteTextStyly(context)
-                                    .copyWith(fontSize: 20, fontWeight: reguler)),
+                                    .copyWith(
+                                        fontSize: 20, fontWeight: reguler)),
                           ),
                           const SizedBox(width: 15),
                           const Icon(
@@ -132,7 +133,7 @@ class HomeView extends GetView<HomeController> {
                         child: Column(
                           children: [
                             Text(
-                              "Today, $formattedWeatherDate",
+                              "$today, $formattedWeatherDate",
                               style: const TextStyle(
                                   color: Colors.white, fontSize: 16),
                             ),
@@ -142,6 +143,13 @@ class HomeView extends GetView<HomeController> {
                                   ? "0°"
                                   : "${homeController.daily!.values!.temperatureApparentAvg}°",
                               style: const TextStyle(
+                                shadows: <Shadow>[
+                                  Shadow(
+                                    blurRadius: 10.0,
+                                    color: Colors.blue,
+                                    offset: Offset(5.0, 5.0),
+                                  ),
+                                ],
                                 color: Colors.white,
                                 fontSize: 70,
                                 fontWeight: FontWeight.bold,
@@ -233,9 +241,10 @@ class HomeView extends GetView<HomeController> {
                     ),
                     WidgetBtnGetStart(
                       onPressed: () {
-                        Get.toNamed(Routes.WEATHERDETAIL,
-                            arguments: {"weather":homeController.weather,
-                            "address":homeController.address});
+                        Get.toNamed(Routes.WEATHERDETAIL, arguments: {
+                          "weather": homeController.weather,
+                          "address": homeController.address
+                        });
                       },
                     ),
                     // const SizedBox(height: 40),
