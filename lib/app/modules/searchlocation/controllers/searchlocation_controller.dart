@@ -6,24 +6,26 @@ import 'package:latlong2/latlong.dart';
 class SearchlocationController extends GetxController {
   final MapController mapController = MapController();
   var isProjectLoaded = true.obs;
+  LatLng? position;
 
-  List<Marker> marker = <Marker>[].obs;
-  final Rx<LatLng> currentLocation = LatLng(5.0559903, 97.3147857).obs;
-  LatLng selectPosition = LatLng(5.0559967, 97.3147731);
+  // List<Mapsmarker> lsitMapsMarker = [];
   LatLng? myLocation;
   TextEditingController searchlocationController = TextEditingController();
   bool isSearching = false;
+  final Rx<LatLng> currentLocation = LatLng(0, 0).obs;
+
+  @override
+  void onInit() {
+    super.onInit();
+    position = Get.arguments;
+    if (position != null) {
+      currentLocation.value = LatLng(position!.latitude, position!.longitude);
+    }
+  }
 
   void updateLocation(LatLng newLocation) {
     currentLocation.value = newLocation;
 
     isProjectLoaded.value = true;
   }
-  //  @override
-  // void onInit() {
-  //   super.onInit();
-  //   Map<String, dynamic> arg = Get.arguments;
-  //   myLocation = arg["weather"];
-  //   address = arg["address"];
-  // }
 }

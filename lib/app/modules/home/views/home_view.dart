@@ -53,7 +53,7 @@ class HomeView extends GetView<HomeController> {
                     color: colorTransparan,
                     child: InkWell(
                       onTap: () {
-                        Get.toNamed(Routes.SEARCHLOCATION);
+                        Get.toNamed(Routes.SEARCHLOCATION, arguments: homeController.position);
                       },
                       child: Row(
                         mainAxisSize: MainAxisSize.min,

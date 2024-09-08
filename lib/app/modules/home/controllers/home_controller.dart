@@ -85,7 +85,6 @@ class HomeController extends GetxController {
       List<Placemark> placemarks = await placemarkFromCoordinates(location.latitude, location.longitude);
       Placemark place = placemarks[0]; 
       address = place.locality;
-      print(place.locality);
     } catch (e) {
       print(e);
     }

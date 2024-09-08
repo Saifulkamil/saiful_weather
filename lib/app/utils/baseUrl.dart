@@ -3,8 +3,8 @@
 class UrlDomain {
   static const baseurl =
       "https://api.tomorrow.io/v4/weather/forecast?location=";
-  // static const apiKei = "&apikey=y7zcdFSB5Bi5teQfmIoZMnMXwwFqk2JR";
-  static const apiKei = "&apikey=YOrdEe828p12cvwWax8zaibRYeMPnXnV";
+  static const apiKei = "&apikey=y7zcdFSB5Bi5teQfmIoZMnMXwwFqk2JR";
+  // static const apiKei = "&apikey=YOrdEe828p12cvwWax8zaibRYeMPnXnV";
   String getApiweather(double? latitude, double? longitude) {
     return "$baseurl$latitude,$longitude$apiKei";
   }
